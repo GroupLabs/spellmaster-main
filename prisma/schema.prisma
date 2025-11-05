@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Word {
+  id                 String            @id @default(auto()) @map("_id") @db.ObjectId
+  word               String
+  exemplarUsage      String
+  WordListSettings   WordListSettings? @relation(fields: [wordListSettingsId], references: [id])
+  wordListSettingsId String?           @map("wordListSettingsId")
+}
+
+model WordListSettings {
+  id               String   @id @map("_id")
+  inspirationWords String[]
+  categories       String[]
+  selectedCategory Int
+  customCategory   String?
+  wordList         Word[]
+  editCode         String
+  Game             Game[]
+
+  @@map("WordListSettings")
+}
+
+model Game {
+  id                 String           @id @default(auto()) @map("_id") @db.ObjectId
+  actualScore        Int?             @map("actual_score")
+  totalScore         Int?             @map("total_score")
+  status             String           @default("pending")
+  wrongWords         String[]         @map("wrong_words")
+  wordListSettings   WordListSettings @relation(fields: [wordListSettingsId], references: [id])
+  wordListSettingsId String
+}
+
+model User {
+  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  username     String @unique
+  browserToken String @unique
+  gold         Int    @default(0)
+  gemGreen     Int    @default(0)
+  gemBlue      Int    @default(0)
+  gemPurple    Int    @default(0)
+}

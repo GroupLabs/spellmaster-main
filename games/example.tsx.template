@@ -1,0 +1,21 @@
+import { IWord } from "@/lib/interface";
+
+function getContent(wordList: IWord[]) {
+  const currentList = wordList.map((word) => ({
+    word: word.word,
+    sentence: word.exemplarUsage.replace(word.word, "_____"),
+  }));
+
+  const raw_html = (the HTML code here);
+
+  return raw_html;
+}
+
+export default function ExampleGame({ wordList }: { wordList: IWord[] }) {
+  return (
+    <iframe
+      srcDoc={getContent(wordList)}
+      style={{ width: "100%", height: "100vh", border: "none" }}
+    />
+  );
+}
