@@ -58,7 +58,7 @@ registerGame(
     name: "Out of Order",
     description: "Can you select the letters in the correct order?",
     image: "/images/orderletters.png",
-    isUnity: true,
+    isUnity: false,
   },
   Game_OrderLetters
 );
