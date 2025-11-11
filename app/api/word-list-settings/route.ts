@@ -22,12 +22,10 @@ export async function POST(request: Request) {
       selectedCategory: body.selectedCategory,
       customCategory: body.customCategory,
       wordList: {
-        createMany: {
-          data: body.wordList.map((word) => ({
-            word: word.word,
-            exemplarUsage: word.exemplarUsage,
-          })),
-        },
+        create: body.wordList.map((word) => ({
+          word: word.word,
+          exemplarUsage: word.exemplarUsage,
+        })),
       },
       editCode: newPwd,
     },
@@ -103,12 +101,10 @@ export async function PATCH(request: Request) {
       customCategory: body.customCategory,
       wordList: {
         deleteMany: {},
-        createMany: {
-          data: body.wordList.map((word) => ({
-            word: word.word,
-            exemplarUsage: word.exemplarUsage,
-          })),
-        },
+        create: body.wordList.map((word) => ({
+          word: word.word,
+          exemplarUsage: word.exemplarUsage,
+        })),
       },
     },
   });

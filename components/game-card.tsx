@@ -63,7 +63,13 @@ export default function GameCard({
           }}
           position={"relative"}
         >
-          <Image src={gameInfo.image} alt={gameInfo.name} layout="fill" />
+          <Image
+            src={gameInfo.image}
+            alt={gameInfo.name}
+            fill
+            sizes="240px"
+            style={{ objectFit: "cover" }}
+          />
         </Box>
 
         <Box paddingX={"16px"}>
