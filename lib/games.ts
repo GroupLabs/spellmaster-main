@@ -69,7 +69,7 @@ registerGame(
     name: "Bubble Bounce",
     description: "The more bubbles you pop, the more words you got!",
     image: "/images/word-bubble.png",
-    isUnity: true,
+    isUnity: false,
   },
 
   Game_WordBubble
