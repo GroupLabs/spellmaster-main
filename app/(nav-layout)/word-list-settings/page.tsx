@@ -719,7 +719,7 @@ const StepTwo = ({
       </Typography>
 
       <Typography fontSize={"14px"} textAlign={"center"} color={"text.secondary"}>
-        Click any field below to make edits, then click 'Publish' to create your game link
+        Click any field below to make edits, then click &apos;Publish&apos; to create your game link
       </Typography>
 
       {wordList.length > 0 ? (
