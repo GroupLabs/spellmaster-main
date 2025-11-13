@@ -47,7 +47,7 @@ registerGame(
     name: "Speak and Spell Challenge",
     description: "A simulated spelling bee - don't be nervous!",
     image: "/images/spelling.png",
-    isUnity: false,
+    isUnity: true,
   },
   Game_Spelling
 );
@@ -58,7 +58,7 @@ registerGame(
     name: "Out of Order",
     description: "Can you select the letters in the correct order?",
     image: "/images/orderletters.png",
-    isUnity: false,
+    isUnity: true,
   },
   Game_OrderLetters
 );
@@ -69,7 +69,7 @@ registerGame(
     name: "Bubble Bounce",
     description: "The more bubbles you pop, the more words you got!",
     image: "/images/word-bubble.png",
-    isUnity: false,
+    isUnity: true,
   },
 
   Game_WordBubble
