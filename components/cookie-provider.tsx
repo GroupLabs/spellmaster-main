@@ -17,7 +17,7 @@ export default function CookieProvider({
           en: {
             consentModal: {
               title: "We use cookies",
-              description: "Cookie modal description",
+              description: "We use cookies to improve your experience!",
               acceptAllBtn: "Accept all",
               acceptNecessaryBtn: "Reject all",
               showPreferencesBtn: "Manage Individual preferences",
@@ -31,7 +31,8 @@ export default function CookieProvider({
               sections: [
                 {
                   title: "Manage cookie preferences",
-                  description: "On this page you can manage your cookie preferences.",
+                  description:
+                    "On this page you can manage your cookie preferences.",
                 },
                 {
                   title: "Strictly Necessary cookies",
@@ -65,7 +66,6 @@ export default function CookieProvider({
         analytics: {
           enabled: true,
         },
-        
       },
     });
   }, []);
