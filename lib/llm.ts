@@ -5,7 +5,7 @@ import {
 } from "@langchain/core/output_parsers";
 
 const model = new ChatAnthropic({
-  model: "claude-3-5-haiku-20241022",
+  model: "claude-sonnet-4-20250514",
   temperature: 0.95,
 });
 
